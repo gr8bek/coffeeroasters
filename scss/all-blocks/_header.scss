@@ -1,21 +1,20 @@
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: #ffffff;
-    padding-bottom: 10px;
-}
-
 .header .container{
     display: flex;
     justify-content: space-between;
-    width: 1280px;
-    padding: 0
-    ;
+    align-items: center;
+    padding: 45px 20px;
 }
 
-.header-logo-link{
-    margin-top: 20px;
+@media only screen and(max-width: 768px) {
+    .header .container{
+        padding-top: 40px;
+        padding-bottom: 53px;
+    }
+}
+
+@media only screen and(max-width: 425px) {
+    .header .container{
+        padding-top: 32px;
+        padding-bottom: 40px;
+    }
 }

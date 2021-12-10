@@ -1,42 +1,99 @@
-.footer .container{
-    width: 1280px;
+.footer .container {
+    margin-bottom: 88px;
+}
+
+.footer__inner {
     display: flex;
-    flex-direction: row;
-    padding: 45px 20px;
-    background-color: #2C343E;
+    align-items: center;
+    padding: 47px 85px;
+    background-color: $dark-grey;
 }
 
-.footer__logo__link{
-    margin-left: 80px;
-    margin-right: 103px;
+.footer__logo {
+    margin-right: 100px;
 }
 
-.footer__item{
-    margin-right: 32px;
-}
+.footer .nav {
+    margin-right: auto;
 
-.footer .list__item__link{
-    color: #83888F;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
+    .nav__link {
+        &:hover {
+            color: $light-cream;
+        }
 
-    &:hover{
-    color: #FEFCF7;
+        &--active {
+            color: $light-cream;
+        }
     }
 }
 
-.footer .nav{
-    margin-right: 360px;
+@media only screen and(max-width:1050px) {
+    .footer__inner {
+        justify-content: space-between;
+    }
+
+    .footer__logo {
+        margin-right: 0;
+    }
+
+    .footer .nav {
+        margin-right: 0;
+    }
 }
 
-.footer .nav__list{
-    padding-top: 7px;
-    margin-top: 0;
+@media only screen and(max-width:950px) {
+    .footer__inner {
+        padding: 47px 30px;
+    }
+
+    .footer .nav__item + .nav__item {
+        margin-left: 16px;
+    }
 }
 
-.footer__link{
-    margin-right: 24px;
+@media only screen and(max-width:768px) {
+    .footer .container {
+        margin-bottom: 72px;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        padding: 54px 30px;
+    }
+
+    .footer__logo {
+        margin-bottom: 32px;
+    }
+
+    .footer .nav {
+        margin-bottom: 65px;
+    }
+
+    .footer .nav__item + .nav__item {
+        margin-left: 32px;
+    }
+}
+
+@media only screen and(max-width:425px) {
+    .footer__logo {
+        margin-bottom: 50px;
+    }
+
+    .footer .nav {
+        margin-bottom: 50px;
+    }
+
+    .footer .nav__list {
+        flex-direction: column;
+    }
+
+    .footer .nav__item + .nav__item {
+        margin-left: 0;
+        margin-top: 24px;
+    }
+
+    .footer .nav__link {
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
